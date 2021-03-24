@@ -13,8 +13,8 @@ function Topbar() {
 
             <ul className="navbar-nav ml-auto">
 
-                <NavItem />
-                <NavItem />
+                <NavItem icon="fa-bell" notification="3+"/>
+                <NavItem icon="fa-envelope" notification="7"/>
 
                 <div className="topbar-divider d-none d-sm-block"></div>
 

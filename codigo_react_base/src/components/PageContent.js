@@ -11,8 +11,8 @@ function PageContent() {
 
 			<div className="row">
 				<Cards title="Productos in Data Base" number="135" icon="fa-clipboard-list" color="primary" />
-				<Cards />
-				<Cards />
+				<Cards title="Amount in products" number="$546.456" icon="fa-dollar-sign" color="success" />
+				<Cards title="Users quantity" number="38" icon="fa-user-check" color="warning" />
 			</div>
 
 			<div className="row">
@@ -40,12 +40,12 @@ function PageContent() {
 						</div>
 						<div className="card-body">
 							<div className="row">
-								<Categories />
-								<Categories />
-								<Categories />
-								<Categories />
-								<Categories />
-								<Categories />
+								<Categories category="Category 01"/>
+								<Categories category="Category 02"/>
+								<Categories category="Category 03"/>
+								<Categories category="Category 04"/>
+								<Categories category="Category 05"/>
+								<Categories category="Category 06"/>
 
 							</div>
 						</div>
