@@ -1,5 +1,10 @@
 import NavItem from './NavItem';
 
+const listaIconos = [
+    {icon:"fa-bell", notification:"3+", identif:"alertsDropdown"},
+    {icon:"fa-envelope", notification:"7", identif:"messagesDropdown"}
+] 
+
 function Topbar() {
     return (
 
@@ -12,9 +17,13 @@ function Topbar() {
 
 
             <ul className="navbar-nav ml-auto">
-
-                <NavItem icon="fa-bell" notification="3+"/>
-                <NavItem icon="fa-envelope" notification="7"/>
+                {listaIconos.map(function(infoIcon, idx) {
+                    return(
+                        <NavItem icono = {infoIcon}/>
+                    )
+                })}
+              
+                
 
                 <div className="topbar-divider d-none d-sm-block"></div>
 

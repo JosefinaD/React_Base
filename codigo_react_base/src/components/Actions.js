@@ -2,8 +2,8 @@ function Actions(props) {
     return (
         <li className="nav-item">
             <a className="nav-link collapsed" href="/">
-                <i className={"fas fa-fw " + props.icon}></i>
-                <span>{props.name}</span>
+                <i className={"fas fa-fw " + props.tipoAccion.icon}></i>
+                <span>{props.tipoAccion.name}</span>
             </a>
         </li>
     );

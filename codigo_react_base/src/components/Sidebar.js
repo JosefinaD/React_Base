@@ -1,4 +1,13 @@
 import Actions from './Actions';
+import React from 'react';
+
+
+const listaAcciones = [
+{name:"Pages", icon:"fa-folder"},
+{name:"Charts", icon:"fa-chart-area"},
+{name:"Tables", icon:"fa-table"}	
+]
+
 function Sidebar() {
 	return (
 		<ul className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
@@ -16,9 +25,14 @@ function Sidebar() {
 			</li>
 			<hr className="sidebar-divider" />
 			<div className="sidebar-heading">Actions</div>
-			<Actions name="Pages" icon="fa-folder"/>
-			<Actions name="Charts" icon="fa-chart-area"/>
-			<Actions name="Tables" icon="fa-table"/>
+			
+			{listaAcciones.map(function(accion, idx) {
+				return(
+				<Actions tipoAccion={accion}/>
+				)
+			})}
+			
+
 
 			<hr className="sidebar-divider d-none d-md-block" />
 		</ul>

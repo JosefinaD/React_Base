@@ -1,6 +1,17 @@
 import Categories from './Categories';
 import Cards from './Cards';
+import NavItem from './NavItem';
 
+const listaTarjetas = [
+	{title:"Productos in Data Base", number:"135", icon:"fa-clipboard-list", color:"primary"},
+	{title:"Amount in products", number:"$546.456", icon:"fa-dollar-sign", color:"success"},
+	{title:"Users quantity", number:"38", icon:"fa-user-check", color:"warning"}
+]
+const listaCategorias = [
+
+	{category:"Category 01"},{category:"Category 02"},{category:"Category 03"},{category:"Category 04"},
+	{category:"Category 05"},{category:"Category 06"}
+]
 function PageContent() {
 	return (
 		<div className="container-fluid">
@@ -10,9 +21,12 @@ function PageContent() {
 			</div>
 
 			<div className="row">
-				<Cards title="Productos in Data Base" number="135" icon="fa-clipboard-list" color="primary" />
-				<Cards title="Amount in products" number="$546.456" icon="fa-dollar-sign" color="success" />
-				<Cards title="Users quantity" number="38" icon="fa-user-check" color="warning" />
+				{listaTarjetas.map(function(item, idx) {
+					return(
+						<Cards tarjeta = {item} />
+					)
+				})
+			}	
 			</div>
 
 			<div className="row">
@@ -40,12 +54,12 @@ function PageContent() {
 						</div>
 						<div className="card-body">
 							<div className="row">
-								<Categories category="Category 01"/>
-								<Categories category="Category 02"/>
-								<Categories category="Category 03"/>
-								<Categories category="Category 04"/>
-								<Categories category="Category 05"/>
-								<Categories category="Category 06"/>
+							{listaCategorias.map(function(cat, idx) {
+								return(
+									<Categories group={cat}/>
+								)
+				})
+			}	
 
 							</div>
 						</div>
